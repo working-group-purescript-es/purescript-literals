@@ -1,1 +1,1 @@
-export const undefined = undefined;
+export const undefinedImpl = undefined;

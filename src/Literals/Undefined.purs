@@ -4,7 +4,8 @@ import Prelude
 
 foreign import data Undefined :: Type
 
-foreign import undefined :: Undefined
+undefined = undefinedImpl
+foreign import undefinedImpl :: Undefined
 
 instance undefinedEq :: Eq Undefined where
   eq _ _ = true
