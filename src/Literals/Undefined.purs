@@ -1,11 +1,12 @@
-module Literals.Undefined where
+module Literals.Undefined (Undefined, undefined) where
 
 import Prelude
 
 foreign import data Undefined :: Type
 
-undefined = undefinedImpl
 foreign import undefinedImpl :: Undefined
+undefined :: Undefined
+undefined = undefinedImpl
 
 instance undefinedEq :: Eq Undefined where
   eq _ _ = true
